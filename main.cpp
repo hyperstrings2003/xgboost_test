@@ -41,8 +41,8 @@ void xgb_test(){
     dmlc::DataIter<RowBatch>* iter;
     //   source_p->Load();
     //     std::unique_ptr<xgboost::data::SimpleCSRSource> source_p(new xgboost::data::SimpleCSRSource());
- //      DMatrix* data22 = DMatrix::Create(parser);
-     DMatrix* data22 = DMatrix::Create(std::move(source_p));
+       DMatrix* data22 = DMatrix::Create(parser);
+ //    DMatrix* data22 = DMatrix::Create(std::move(source_p));
     vector<DMatrix*> cache_data;//(1,data22);
     Learner* learner22 = Learner::Create(cache_data);
     //  std::unique_ptr<dmlc::Stream> fi(dmlc::Stream::Create("dump.raw.txt", "r"));
